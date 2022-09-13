@@ -1,0 +1,121 @@
+@import url('../style/font.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shabnam';
+    list-style: none;
+}
+
+:root{
+    --primary-color:#6d28d9;
+    --secondary-color:#ede9fe;
+    --main-white:#fff;
+    --body-bg-color:#f6f6f6;
+    --main-black:#222;
+    --main-gray:#7c7c7c;
+    --main-red:#db2777;
+}
+
+body{
+    font-family: 'Shabnam';
+    color: var(--main-black);
+    background:var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+}
+
+.forms{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    
+}
+.forms input{
+    flex: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.todo-button{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.forms input, .todo-button{
+    border: none;
+    outline: none;
+    background-color: var(--main-white);
+    font-style: 1rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.todo-button:hover{
+    background: var(--secondary-color);
+}
+
+.todo-lists{
+    width: 18.5rem;
+}
+
+.todo{
+    display: flex;
+    background: var(--secondary-color);
+    padding: 0.4rem;
+    border-radius: 10px;
+    color: var(--main-black);
+    font-weight: 600;
+
+    align-items: center;
+}
+.todo li{
+    flex: 1;
+}
+
+.todo span{
+    display: block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-trash-can{
+    color: var(--main-red);
+}
+.fa-square-check{
+    color: var(--primary-color);
+}
+
+.todo span:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
