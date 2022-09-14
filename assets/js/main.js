@@ -4,6 +4,7 @@ const todoButton = document.querySelector("#todo-button");
 const todoList = document.querySelector("#todo-lists");
 //add event listeners
 todoButton.addEventListener("click", addTodo);
+todoList.addEventListener("click", check);
 //functions
 
 function addTodo(event) {
@@ -18,4 +19,15 @@ function addTodo(event) {
   todoDiv.innerHTML = newTodo;
   todoList.appendChild(todoDiv);
   todoInput.value = "";
+}
+
+function check(event) {
+  const classList = [...event.target.classList];
+  const items = event.target;
+  const row = items.parentElement.parentElement;
+  if (classList[1] === "fa-square-check") {
+    row.classList.toggle("done");
+  } else if (classList[1] === "fa-trash-can") {
+    row.remove();
+  }
 }

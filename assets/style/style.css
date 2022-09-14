@@ -10,6 +10,7 @@
 
 :root{
     --primary-color:#6d28d9;
+    --done-color:#28d992;
     --secondary-color:#ede9fe;
     --main-white:#fff;
     --body-bg-color:#f6f6f6;
@@ -119,4 +120,11 @@ header{
 .todo span:hover{
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
+}
+
+.done{
+    background: var(--done-color);
+    text-decoration: line-through;
+    color: #585858;
+    opacity: 0.7;
 }
