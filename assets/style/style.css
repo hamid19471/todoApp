@@ -50,7 +50,7 @@ header{
 .form-container{
     display: flex;
     justify-content: space-between;
-    width: 25rem;
+    width: 26.6rem;
     
 }
 .forms input{
@@ -122,7 +122,37 @@ header{
     transition: all 0.3s ease-in-out;
 }
 
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.select{
+    margin-left: 10px;
+    cursor: pointer;
+    width: 10rem;
+    position: relative;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8rem;
+    color: var(--primary-color);
+    pointer-events: none;
+    font-size: 13px;
+}
+
 .done{
+    display: flex;
     background: var(--done-color);
     text-decoration: line-through;
     color: #585858;
